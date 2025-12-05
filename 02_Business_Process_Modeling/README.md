@@ -45,15 +45,12 @@ This process covers:
 
 ## Documentation & Analytical Insights
 - **MIS Functions:** Supports decision-making, monitors stock levels, tracks payments, identifies top-performing products and customers  
-- **Organizational Impact:** Streamlines operations, reduces errors, improves financial tracking, and enhances strategic planning  
+- **Organizational Impact:**  improves financial tracking, and enhances strategic planning  
 - **Analytics Opportunities:**  
   - Product demand per region  
   - Payment trends  
   - Outstanding balances and follow-ups  
 
 ## Tools Used
-BPMN.io  
+BPMN.io 
 
-## Deliverables
-- **BPMN Diagram:** GitHub repository includes the diagram with swimlanes  
-- **Explanation Document:** One-page summary of the business process, MIS role, and organizational impact  
