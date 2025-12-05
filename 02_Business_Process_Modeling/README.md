@@ -54,5 +54,6 @@ This process covers:
 ## Tools Used
 BPMN.io 
 
-![bpmn].(screenshot/BPMN.png)
+![bpmn].(02_Business_Process_Modeling/screenshot/BPMN.PNG)
+
 
