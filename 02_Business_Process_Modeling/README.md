@@ -1,4 +1,4 @@
-# AgriPlus Rwanda MIS Business Process Modeling
+# AgriPlus Rwanda MIS Business Process Modeling!
 
 ## Project Overview
 This project models the business process of **AgriPlus Rwanda** using **Business Process Modeling Notation (BPMN)** and **swimlanes**. The focus is on the **Management Information System (MIS)** that supports order processing, sales management, payment tracking, and analytics reporting. The model illustrates the complete workflow from customer order initiation to data-driven decision-making.
@@ -54,3 +54,4 @@ This process covers:
 ## Tools Used
 BPMN.io 
 
+![bpmn].()
