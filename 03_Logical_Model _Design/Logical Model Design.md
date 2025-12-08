@@ -366,3 +366,4 @@ Numeric precision supports realistic agribusiness values.
 
 Primary keys are numeric auto-generated or assigned by sequence.
 
+
