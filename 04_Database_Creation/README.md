@@ -88,132 +88,89 @@ ALTER SESSION SET CONTAINER = tue_27715_yabesi_agricultureSales_db;
 
 ```sql
 CREATE TABLESPACE agriculture\_data
-
 DATAFILE 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db\\agriculture\_data01.dbf'
-
 SIZE 100M
-
 AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED
-
 EXTENT MANAGEMENT LOCAL
-
 SEGMENT SPACE MANAGEMENT AUTO;
-
 ```
 
-![bpmn](screenshots/pdb_created.png)
+![bpmn](screenshots/Data_Tablespace.png)
 
+#### 4.2 Index Tablespace
 
-
-#### **4.2 Index Tablespace**
-
-
-
+```sql
 CREATE TABLESPACE agriculture\_index
-
 DATAFILE 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db\\agriculture\_index01.dbf'
-
 SIZE 100M
-
 AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED;
+```
+
+![bpmn](screenshots/Index_Tablespace.png)
 
 
 
-📷 Screenshot — Index Tablespace
-
-
-
-#### **4.3 Temporary Tablespace**
-
-
+#### 4.3 Temporary Tablespace
+```sql
 
 CREATE TEMPORARY TABLESPACE agriculture\_temp
-
 TEMPFILE 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db\\agriculture\_temp01.dbf'
-
 SIZE 50M
-
 AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED;
+```
+
+![bpmn](screenshots/Temporary_Tablespace.png)
 
 
 
-📷 Screenshot — Temp Tablespace
+#### Step 5 — Autoextend Configuration
 
-
-
-#### **Step 5 — Autoextend Configuration**
-
-
+```sql
 
 ALTER DATABASE DATAFILE 
-
 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db\\agriculture\_data01.dbf'
-
 AUTOEXTEND ON NEXT 20M MAXSIZE 2G;
+```
+
+![bpmn](screenshots/Autoextend_datafiles.png)
 
 
-
-📷 Screenshot — Autoextend Enabled
-
-
-
-#### &nbsp;**Step 6 — Tablespaces Verification**
-
+#### Step 6 — Tablespaces Verification
+```sql
 SELECT tablespace\_name, status, contents, extent\_management 
-
 FROM dba\_tablespaces;
+```
+![bpmn](screenshots/My_tablespaces.png)
 
 
-
-📷 Screenshot — Tablespace Verification Output
-
-
-
-####  **Step 7 — Archive Log Mode Check**
-
-
-
+####  Step 7 — Archive Log Mode Check**
+```sql
 SELECT log\_mode FROM v$database;
-
-
-
-
-
+```
 or:
-
-
-
+```sql
 ARCHIVE LOG LIST;
+```
 
 
+![bpmn](screenshots/Archive_log_list.png)
 
-📷 Screenshot — Archive Log Mode
-
-
-
-#### **Notes:**
-
-
+#### Notes:
 
 Screenshots serve as evidence of implementation.
 
-
-
 Database structure is optimized for performance.
-
-
 
 Tablespaces are configured to auto-extend safely.
 
 
-
-#### **Conclusion**
-
+#### Conclusion
 
 
 The Phase IV configuration successfully created and configured the Oracle pluggable database environment required for the project.
 
 All deliverables including scripts, configuration, and evidence screenshots have been compiled and documented for evaluation.
+
 
 
 
