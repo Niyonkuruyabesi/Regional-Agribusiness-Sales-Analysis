@@ -1,16 +1,11 @@
 # **Regional Agricultural Sales Analysis Database**
 
-# &nbsp; 
 
 ## **Oracle PDB Implementation**   
 
 ## 
-
-\*\*Student:\*\* NIYONKURU NYIRIMPETA Yabesi  
-
-\*\*PDB Name:\*\* tue\_27715\_yabesi\_agricultureSales\_db  
-
-
+Student: NIYONKURU NYIRIMPETA Yabesi  
+PDB Name: tue\_27715\_yabesi\_agricultureSales\_db  
 
 ---
 
@@ -104,34 +99,22 @@ Implemented:
 
 ```sql
 
-CREATE PLUGGABLE DATABASE tue\_27715\_yabesi\_agricultureSales\_db
-
-ADMIN USER yabesi\_admin IDENTIFIED BY yabesi
-
-FILE\_NAME\_CONVERT = (
-
-&nbsp; 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\pdbseed',
-
-&nbsp; 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db'
-
+CREATE PLUGGABLE DATABASE tue_27715_yabesi_agricultureSales_db
+ADMIN USER yabesi_admin IDENTIFIED BY yabesi
+FILE_NAME_CONVERT = (
+  'C:\app\niyon\product\21c\oradata\XE\pdbseed',
+  'C:\app\niyon\product\21c\oradata\XE\agriculturesales_db'
 );
-
-
-
-
-
-
-
+```
+![bpmn](screenshots/pdb_created.png)
 
 
 #### **Step 2 — Open and Save PDB State**
 
-
-
+```sql
 ALTER PLUGGABLE DATABASE tue\_27715\_yabesi\_agricultureSales\_db OPEN;
-
 ALTER PLUGGABLE DATABASE tue\_27715\_yabesi\_agricultureSales\_db SAVE STATE;
-
+```
 
 
 
@@ -285,4 +268,5 @@ Tablespaces are configured to auto-extend safely.
 The Phase IV configuration successfully created and configured the Oracle pluggable database environment required for the project.
 
 All deliverables including scripts, configuration, and evidence screenshots have been compiled and documented for evaluation.
+
 
