@@ -29,51 +29,31 @@ It includes structured tables, PL/SQL logic, tablespaces, and performance config
 
 ---
 
-
-
-### **# Naming Convention**  
-
-
-
-
+###  Naming Convention**  
 
 Implemented:  
 
-`tue\_27715\_yabesi\_agricultureSales\_db`
-
-
+```tue_27715_yabesi_agricultureSales_db```
 
 ---
 
-
-
-### **#  Admin User Configuration**  
-
-
+###  Admin User Configuration**  
 
 | Parameter | Value |
-
 |----------|--------|
-
 | Username | `yabesi\_admin` |
-
 | Password | `yabesi` |
-
 | Privileges | Super Admin |
-
 | Access | Full PDB control |
-
 
 
 > Password used for academic purposes only.
 
-
-
 ---
 
 
 
-#### **# Step 1 — PDB Creation**  
+####  Step 1 — PDB Creation**  
 
 
 
@@ -89,38 +69,24 @@ FILE_NAME_CONVERT = (
 ![bpmn](screenshots/pdb_created.png)
 
 
-#### **Step 2 — Open and Save PDB State**
+#### Step 2 — Open and Save PDB State
 
 ```sql
-ALTER PLUGGABLE DATABASE tue\_27715\_yabesi\_agricultureSales\_db OPEN;
-ALTER PLUGGABLE DATABASE tue\_27715\_yabesi\_agricultureSales\_db SAVE STATE;
+ALTER PLUGGABLE DATABASE tue_27715_yabesi_agricultureSales_db OPEN;
+ALTER PLUGGABLE DATABASE tue_27715_yabesi_agricultureSales_db SAVE STATE;
 ```
 
+#### Step 3 — Switch Session to PDB
 
+```sql
+ALTER SESSION SET CONTAINER = tue_27715_yabesi_agricultureSales_db;
+```
 
+#### Step 4 — Tablespace Creation
 
+#### 4.1 Data Tablespace
 
-
-#### **Step 3 — Switch Session to PDB**
-
-
-
-ALTER SESSION SET CONTAINER = tue\_27715\_yabesi\_agricultureSales\_db;
-
-
-
-📷 Screenshot — Switch Session
-
-
-
-#### **Step 4 — Tablespace Creation**
-
-
-
-#### **4.1 Data Tablespace**
-
-
-
+```sql
 CREATE TABLESPACE agriculture\_data
 
 DATAFILE 'C:\\app\\niyon\\product\\21c\\oradata\\XE\\agriculturesales\_db\\agriculture\_data01.dbf'
@@ -133,9 +99,9 @@ EXTENT MANAGEMENT LOCAL
 
 SEGMENT SPACE MANAGEMENT AUTO;
 
+```
 
-
-📷 Screenshot — Data Tablespace
+![bpmn](screenshots/pdb_created.png)
 
 
 
@@ -248,6 +214,7 @@ Tablespaces are configured to auto-extend safely.
 The Phase IV configuration successfully created and configured the Oracle pluggable database environment required for the project.
 
 All deliverables including scripts, configuration, and evidence screenshots have been compiled and documented for evaluation.
+
 
 
 
