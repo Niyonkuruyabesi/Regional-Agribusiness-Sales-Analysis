@@ -9,40 +9,20 @@ PDB Name: tue\_27715\_yabesi\_agricultureSales\_db
 
 ---
 
-
-
-### **##  Project Overview**  
-
-
+###   Project Overview 
 
 This project implements an Oracle \*\*Pluggable Database (PDB)\*\* dedicated to managing agricultural sales data across regions in Rwanda.  
-
 It includes structured tables, PL/SQL logic, tablespaces, and performance configurations.
-
-
-
-This README documents the \*\*Phase IV: Database Creation\*\*, including creation scripts, tablespace setup, archive log configuration, and screenshots taken in SQL Developer.
-
-
 
 ---
 
-
-
-### **# Objectives**  
-
-
+###  Objectives
 
 \- Create a pluggable database  
-
 \- Configure data, index, and temporary tablespaces  
-
 \- Enable archive log mode  
-
 \- Assign a super admin user  
-
 \- Configure storage auto-extension  
-
 \- Provide complete documentation  
 
 
@@ -268,5 +248,6 @@ Tablespaces are configured to auto-extend safely.
 The Phase IV configuration successfully created and configured the Oracle pluggable database environment required for the project.
 
 All deliverables including scripts, configuration, and evidence screenshots have been compiled and documented for evaluation.
+
 
 
